@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Trader | Hedge Fund Level Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#020617;
+      --card:#0b1220;
+      --accent:#22c55e;
+      --accent2:#38bdf8;
+      --text:#e5e7eb;
+      --muted:#94a3b8;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:var(--bg);color:var(--text);overflow-x:hidden}
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes glow{0%{box-shadow:0 0 0 rgba(34,197,94,0)}50%{box-shadow:0 0 60px rgba(34,197,94,.35)}100%{box-shadow:0 0 0 rgba(34,197,94,0)}}
+
+    section,header{animation:fadeUp 1s ease both}
+
+    /* ===== HERO (HEDGE FUND STYLE) ===== */
+    header{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:
+        radial-gradient(circle at top left,rgba(56,189,248,.15),transparent 40%),
+        radial-gradient(circle at bottom right,rgba(34,197,94,.15),transparent 40%),
+        #020617;
+    }
+
+    .hero{max-width:1200px;width:100%;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;padding:40px}
+
+    .hero h1{
+      font-size:3.8rem;font-weight:700;line-height:1.1;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      -webkit-background-clip:text;color:transparent;animation:glow 5s infinite
+    }
+    .hero p{margin-top:20px;color:var(--muted);font-size:1.15rem}
+
+    .hero-card{
+      background:linear-gradient(180deg,#0f172a,#020617);
+      border-radius:28px;padding:40px;
+      box-shadow:0 40px 100px rgba(0,0,0,.7)
+    }
+
+    .profile{
+      display:flex;flex-direction:column;align-items:center;text-align:center
+    }
+    .profile img{
+      width:160px;height:160px;border-radius:50%;
+      border:4px solid var(--accent2);margin-bottom:20px
+    }
+
+    nav{margin-top:30px}
+    nav a{color:var(--text);margin-right:20px;text-decoration:none;position:relative}
+    nav a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:2px;background:linear-gradient(135deg,var(--accent),var(--accent2));transition:.4s}
+    nav a:hover::after{width:100%}
+
+    /* ===== SECTIONS ===== */
+    section{padding:120px 20px;max-width:1200px;margin:auto}
+    h2{text-align:center;font-size:2.6rem;margin-bottom:60px}
+
+    .grid{display:grid;gap:30px}
+    .three{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+
+    .card{
+      background:linear-gradient(180deg,#0f172a,#020617);
+      border-radius:26px;padding:40px;
+      box-shadow:0 30px 80px rgba(0,0,0,.6);
+      transition:.4s
+    }
+    .card:hover{transform:translateY(-12px) scale(1.03)}
+
+    /* ===== STATS (INSTAGRAM STYLE) ===== */
+    .stat{text-align:center}
+    .stat h3{font-size:2.6rem;color:var(--accent)}
+
+    /* ===== MARKET ===== */
+    .price{font-size:2rem;font-weight:600;color:var(--accent2)}
+
+    /* ===== CTA ===== */
+    .btn{
+      display:inline-block;margin-top:20px;padding:14px 38px;
+      border-radius:50px;font-weight:600;text-decoration:none;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      color:#020617
+    }
+
+    footer{text-align:center;padding:60px;color:var(--muted)}
+
+    @media(max-width:900px){.hero{grid-template-columns:1fr}.hero h1{font-size:3rem}}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <div>
+      <h1>Elite Professional Trader</h1>
+      <p>Institutional Forex • Crypto • Stock Market Trading with discipline, data and capital protection.</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#market">Market</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+    <div class="hero-card profile">
+      <img src="https://i.ibb.co/7kKQ1ZB/profile.png" alt="Trader">
+      <h3>John Doe</h3>
+      <p>7+ Years | Funded Trader</p>
+      <a class="btn" href="#contact">Work With Me</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <h2>Track Record</h2>
+  <div class="grid three">
+    <div class="card stat"><h3>7+</h3><p>Years Experience</p></div>
+    <div class="card stat"><h3>85%</h3><p>Win Rate</p></div>
+    <div class="card stat"><h3>$2M+</h3><p>Capital Managed</p></div>
+  </div>
+</section>
+
+<section id="services">
+  <h2>Premium Services</h2>
+  <div class="grid three">
+    <div class="card"><h3>Account Management</h3><p>Professional low-risk portfolio management.</p></div>
+    <div class="card"><h3>Signal Service</h3><p>High probability institutional signals.</p></div>
+    <div class="card"><h3>Mentorship</h3><p>1-on-1 coaching with live execution.</p></div>
+  </div>
+</section>
+
+<section id="market">
+  <h2>Live Market</h2>
+  <div class="grid three">
+    <div class="card"><h3>Bitcoin</h3><p class="price" id="btc">Loading...</p></div>
+    <div class="card"><h3>Ethereum</h3><p class="price" id="eth">Loading...</p></div>
+    <div class="card"><h3>BNB</h3><p class="price" id="bnb">Loading...</p></div>
+  </div>
+  <div class="card" style="margin-top:70px">
+    <iframe src="https://s.tradingview.com/widgetembed/?symbol=FX:EURUSD&interval=15&theme=dark" style="width:100%;height:480px;border:none;border-radius:24px"></iframe>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Let’s Work Together</h2>
+  <div class="card" style="text-align:center">
+    <p>Serious traders & investors only.</p>
+    <a class="btn" href="#">Contact Now</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Elite Trader • Hedge Fund Level Portfolio
+</footer>
+
+<script>
+  async function loadPrices(){
+    const r = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin&vs_currencies=usd');
+    const d = await r.json();
+    btc.innerText='$'+d.bitcoin.usd;eth.innerText='$'+d.ethereum.usd;bnb.innerText='$'+d.binancecoin.usd;
+  }
+  loadPrices();setInterval(loadPrices,60000);
+</script>
+
+</body>
+</html>
